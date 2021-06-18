@@ -31,8 +31,8 @@ const Search: React.FC<ISearch> = ({ results }) => {
 export default Search;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-    // const useDummyData = process.env.USE_DUMMY === "0" ? false : true;
-    const useDummyData = false;
+    const useDummyData = process.env.USE_DUMMY === "0" ? false : true;
+    // const useDummyData = false;
     console.log(useDummyData);
     const startIndex = context.query.start || "0";
 
